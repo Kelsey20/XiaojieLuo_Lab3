@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="java.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="wrapper__title">Tip Calculator</h1>
+        <form class="calculator">
+            <div class="calculator__row">
+                <label for="bill">enter the bill amount for your meal: $</label>
+                <input type="text" id="bill" class="calculator__bill" value="5" required/>
+            </div>
+            <div class="calculator__row">
+                <label for='range'>Tip:</label>
+                <input type="range" min="0" max="100" value="0" step="1" class="calculator__tip" id="tip" required/>
+            </div>
+            <div class="calculator__row">
+                <label for="tip">tip Percentage: <span class="tip-amount"></span></label>
+            </div>
+            <div class="calculator__row">
+                <label for='bill'>Total Bill with Tip:<span class="calculator__result"></span></label>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
