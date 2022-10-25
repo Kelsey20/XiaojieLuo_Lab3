@@ -10,6 +10,7 @@ $(document).ready( function () {
     var calculatorTip = calculator.find('.calculator__tip');
     var calculatorResult = calculator.find('.calculator__result');
     var tipAmount = calculator.find('.tip-amount');
+    var tipValue = calculator.find('.tip-value');
 
 
     // INIT BILL
@@ -20,6 +21,7 @@ $(document).ready( function () {
         amount = calculatorBill.val() * 1;
         percent = calculatorTip.val() * 1;
         result = amount + amount * ( percent / 100 );
+        tipValue.text(result - amount + '$')
         calculatorResult.text( result.toFixed(2) + '$' );
     });
 
@@ -30,7 +32,7 @@ $(document).ready( function () {
     calculatorTip.on('change', function () {
 
         if ( calculatorBill.val() === '' || isNaN( calculatorBill.val() ) ) {
-            alert('Enter bill amount, please!')
+            alert('Please enter the valid numeric, Thanks!')
         } else {
             amount = calculatorBill.val() * 1;
         }
@@ -38,6 +40,7 @@ $(document).ready( function () {
         tipAmount.text( calculatorTip.val() + '%' );
         percent = calculatorTip.val() * 1;
         result = amount + amount * ( percent / 100 );
+        tipValue.text(result - amount + '$')
         calculatorResult.text( result.toFixed(2) + '$' );
     });
 
