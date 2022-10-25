@@ -21,7 +21,7 @@ $(document).ready( function () {
         amount = calculatorBill.val() * 1;
         percent = calculatorTip.val() * 1;
         result = amount + amount * ( percent / 100 );
-        tipValue.text(result - amount + '$')
+        ttipValue.text((result - amount).toFixed(2)+ '$');
         calculatorResult.text( result.toFixed(2) + '$' );
     });
 
@@ -40,7 +40,7 @@ $(document).ready( function () {
         tipAmount.text( calculatorTip.val() + '%' );
         percent = calculatorTip.val() * 1;
         result = amount + amount * ( percent / 100 );
-        tipValue.text(result - amount + '$')
+        tipValue.text((result - amount).toFixed(2)+ '$');
         calculatorResult.text( result.toFixed(2) + '$' );
     });
 
