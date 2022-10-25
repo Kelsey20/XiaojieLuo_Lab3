@@ -12,15 +12,15 @@
         <h1 class="wrapper__title">Tip Calculator</h1>
         <form class="calculator">
             <div class="calculator__row">
-                <label for="bill">Please enter the bill you spend: $</label>
+                <label for="bill">enter the bill amount for your meal: $</label>
                 <input type="text" id="bill" class="calculator__bill" value="0" required/>
             </div>
             <div class="calculator__row">
-                <label for='range'>Tip:</label>
-                <input type="range" min="0" max="100" value="0" step="1" class="calculator__tip" id="tip" required/>
-            </div>
+                <label for="value">tip Value: <span class="tip-value"></span></label>
+            </div>  
             <div class="calculator__row">
                 <label for="tip">tip Percentage: <span class="tip-amount"></span></label>
+                <input type="range" min="0" max="100" value="0" step="1" class="calculator__tip" id="tip" required/>
             </div>
             <div class="calculator__row">
                 <label for='bill'>Total Bill with Tip:<span class="calculator__result"></span></label>
@@ -29,6 +29,8 @@
     </div>
 </body>
 </html>
+
+
 
 
 
